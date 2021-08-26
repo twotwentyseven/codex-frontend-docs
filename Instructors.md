@@ -6,7 +6,9 @@ Shows a list of instructors.  Optionally filtered by instructor ID or Handle.
 
 ```html
 <codex-instructors
-  
+  instructor-detail-url="/pages/instructor/{ id }/detail"
+  only-handles="eric, sam, rich"
+  exclude-ids="[1, 3, 6]"
 >
 </codex-instructors>
 ```
