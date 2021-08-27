@@ -21,7 +21,7 @@ Shows a list of instructors.  Optionally filtered by instructor ID or Handle.
 | only-handles | Only show instructors that have matching handles | Array or String (comma separated) | ['anthony', 'paul', 'simone'] |
 | exclude-handles  | Exclude instructors that have matching handles | Array or String (comma separated) | ['david', 'simon'] |
 | only-ids         | Only show instructors that have matching IDs | Array or String (comma separated) | [1, 2, 3] |
-| exclude-handles         | Exclude instructors that have matching IDs | Array or String (comma separated) | [5, 6, 7] |
+| exclude-ids         | Exclude instructors that have matching IDs | Array or String (comma separated) | [5, 6, 7] |
 
 
 ## URL parameters (filtering)
