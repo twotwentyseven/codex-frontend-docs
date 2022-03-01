@@ -74,6 +74,24 @@ Renders a timetable of events.
 </codex-timetable>
 ```
 
+**event-card**
+
+```html
+<codex-timetable>
+	<template v-slot:event-card="{ event, customer, showEventDate, isBookmarked, toggleBookmark, bookmarkIdentifier, goToEvent }">
+	</template>
+</codex-timetable>
+```
+
+**event-modal**
+
+```html
+<codex-timetable>
+	<template v-slot:event-modal="{ id, eventObject, purchaseUrl, isModal, closeModal }">
+	</template>
+</codex-timetable>
+```
+
 ## URL Parameters
 
 Any key/value, where the key matches a key supplied in the `filters` prop. For example, with a filters config that looks like the following:
@@ -81,7 +99,7 @@ Any key/value, where the key matches a key supplied in the `filters` prop. For e
 ```vue
 <codex-timetable :filters="{
 	location: {
-		selector: "studio.location.id",
+		selector: "studio.location",
 		multi: true
 	}
 }"></codex-timetable>
