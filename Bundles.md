@@ -1,26 +1,61 @@
 # Bundles
 
-Shows a list of bundles available to the customer.  Clicking a bundle adds to cart.
+Renders bundle cards.
 
 ## Quick usage
 
-```html
-<bundles></bundles>
+```vue
+<codex-bundles></codex-bundles>
 ```
 
-## Properties
+## Props
 
-| Name | Description | Options | Default |
-|------|-------------|---------|---------|
-| filter-bundles | Only show matching bundles | A comma separated list of bundle handles | None (Show all) |
-| filter-bundle-types | Only show bundles with matching bundle types | A comma separated list of bundle type handles | None (Show all) |
-| :hide-disabled-bundles | Hide bundles that cannot be purchased instead of disabling them | true, false | false |
-| :hide-if-no-results | Hide entire component if no bundles are available | true, false | false |
+**Optional**
+
+| Name | Description | Type | Default | Validation |
+| - | - | - | - | - |
+| hideIfNoResults | Hide this component if there are no results to show | `Boolean` | `false` | - |
+| hideDisabledBundles | Hide bundles if they are set as disabled | `Boolean` | `false` | - |
+| contentWrapperType | The element / component to wrap bundle cards in. Note: At the moment the only component supported is `swiper` | `String` | `'div'` | - |
+| contentWrapperSettings | Settings to pass through to the content wrapper type. See [contentWrapperSettings](./shared/ContentWrapperSettings) for more information | `Object` | `{}` | - |
+
 
 
 ## Slots
 
-This component has one default slot that is added just before the credit bundles are listed.
+**error-messages**
+
+```html
+<codex-bundles>
+	<template v-slot:error-messages="{ errors }"></template>
+</codex-bundles>
+```
+
+**loading-message**
+
+```html
+<codex-bundles>
+	<template v-slot:loading-message></template>
+</codex-bundles>
+```
+
+**header**
+
+Rendered inside of `cdx_panel`
+```html
+<codex-bundles>
+	<template v-slot:header></template>
+</codex-bundles>
+```
+
+**no-results**   
+
+Rendered inside of `cdx_noresults`
+```html
+<codex-bundles>
+	<template v-slot:no-results></template>
+</codex-bundles>
+```
 
 ## URL parameters
 
@@ -28,8 +63,11 @@ None
 
 ## Events
 
-This component emits a `codex` event to the `document` once all bundles have been loaded from the API, with a payload of:
+There are no events emitted by this component.
 
-```
-{ detail: 'bundles', action: 'loaded' }
-```
+## Override
+
+`
+codex-template-bundles
+`
+
