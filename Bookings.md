@@ -1,21 +1,71 @@
 # Bookings
 
-Shows a paginated list of bookings made by the currently logged in customer.  Requires authentication.
+Renders booking-cards for future or past customer bookings.
 
 ## Quick usage
 
-```html
-<bookings></bookings>
+```vue
+<codex-bookings></codex-bookings>
 ```
 
-## Properties
+## Props
 
-| Name | Description | Options | Default |
-|------|-------------|---------|---------|
-| event-detail-url | URL to direct customer to when event is clicked | Any valid URL | /pages/class |
-| video-detail-url | URL to direct customer to when an associated live video is clicked | Any valid URL | /pages/video |
-| previous | Show only historical/bookings instead of upcoming | true, false | false |
+**Optional**
 
+| Name | Description | Type | Default | Validation |
+| - | - | - | - | - |
+| eventDetailUrl | The slug used for the event's detail page | `String` | '/pages/class/{ id }' | - |
+| videoDetailUrl | The slug used for the event's video | `String` | '/pages/video/{ id }' | - |
+| perPage | The number of bookings to show per page (results will be paginated if there are more than this number) | `Number` | `10` | - |
+| type | Whether to show upcoming bookings or previous bookings | `String` | 'upcoming' | Either 'upcoming' or 'previous' |
+| hideIfNoResults | Hide this component if there are no results to show | `Boolean` | `false` | - |
+
+
+
+## Slots
+
+**error-messages**
+
+```html
+<codex-bookings>
+	<template v-slot:error-messages="{ errors }"></template>
+</codex-bookings>
+```
+
+**loading-message**
+
+```html
+<codex-bookings>
+	<template v-slot:loading-message></template>
+</codex-bookings>
+```
+
+**header**
+
+Rendered inside of `cdx_title`
+```html
+<codex-bookings>
+	<template v-slot:header="{ type }"></template>
+</codex-bookings>
+```
+
+**no-results**   
+
+Rendered inside of `cdx_noresults`
+```html
+<codex-bookings>
+	<template v-slot:no-results="{ type }"></template>
+</codex-bookings>
+```
+
+**booking-cards**   
+
+Rendered inside of `cdx_list`
+```html
+<codex-bookings>
+	<template v-slot:booking-cards="{ bookings, handleViewEvent, handleCancel, handleWatch, handleJoinZoom }"></template>
+</codex-bookings>
+```
 
 ## URL parameters
 
@@ -24,3 +74,10 @@ None
 ## Events
 
 There are no events emitted by this component.
+
+## Override
+
+`
+codex-template-event
+`
+
