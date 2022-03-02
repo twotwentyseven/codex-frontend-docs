@@ -4,7 +4,7 @@ Creates an interactive chat window for use in events and videos.
 
 ## Quick usage
 
-```html
+```vue
 <chat id="1234"></chat>
 ```
 
@@ -47,6 +47,16 @@ window.codex = {
 	    ]
 	}
 };
+```
+
+## Slots
+
+**loading-message**
+
+```html
+<codex-chat>
+	<template v-slot:loading-message></template>
+</codex-chat>
 ```
 
 ## URL parameters
