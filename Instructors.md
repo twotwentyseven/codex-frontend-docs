@@ -1,33 +1,73 @@
 # Instructors
 
-Shows a list of instructors.  Optionally filtered by instructor ID or Handle.
+Renders booking-cards for future or past customer bookings.
 
 ## Quick usage
 
-```html
-<codex-instructors
-  instructor-detail-url="/pages/instructor/{ id }/detail"
-  only-handles="eric, sam, rich"
-  exclude-ids="[1, 3, 6]"
->
-</codex-instructors>
+```vue
+<codex-instructors instructor-detail-url="/pages/instructor/{ id }"></codex-instructors>
 ```
 
-## Properties
+## Props
 
-| Name               | Description                                                                                                 | Options                                                                                       | Default                                        |
-|--------------------|-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|------------------------------------------------|
-| instructor-detail-url | URL to go to when event is clicked.  String is parsed and { keys } replaced with instructor data.  e.g. /instructors/{ handle } | Any valid string | None |
-| only-handles | Only show instructors that have matching handles | Array or String (comma separated) | ['anthony', 'paul', 'simone'] |
-| exclude-handles  | Exclude instructors that have matching handles | Array or String (comma separated) | ['david', 'simon'] |
-| only-ids         | Only show instructors that have matching IDs | Array or String (comma separated) | [1, 2, 3] |
-| exclude-ids         | Exclude instructors that have matching IDs | Array or String (comma separated) | [5, 6, 7] |
+**Optional**
 
+| Name | Description | Type | Default | Validation |
+| - | - | - | - | - |
+| instructorDetailUrl | The slug used for the instructor's detail page | `String` | '/pages/class/{ id }' | - |
+| showTags | The tags to display within instructor cards | `Array` | `[]` | - |
+| onlyShowBookmarked | Only show instructors that the customer has bookmarked | `String` | 'upcoming' | Either 'upcoming' or 'previous' |
+| hideFilters | Hide `<codex-filters>`. Default filters can still be used but not updated. | `Boolean` | `false` | - |
 
-## URL parameters (filtering)
+> Note: Also see [common props](./shared/CommonProps.md) for descriptions of other available props.
 
-n/a
+## Slots
+
+**error-messages**
+
+```html
+<codex-bookings>
+	<template v-slot:error-messages="{ errors }"></template>
+</codex-bookings>
+```
+
+**loading-message**
+
+```html
+<codex-bookings>
+	<template v-slot:loading-message></template>
+</codex-bookings>
+```
+
+**no-results**   
+
+Rendered inside of `cdx_noresults`
+```html
+<codex-bookings>
+	<template v-slot:no-results="{ type }"></template>
+</codex-bookings>
+```
+
+**instructor-cards**   
+
+Rendered inside of `cdx_list`
+```html
+<codex-bookings>
+	<template v-slot:instructor-card="{ filteredResource, showTags, handleInstructorClick }"></template>
+</codex-bookings>
+```
+
+## URL parameters
+
+None
 
 ## Events
 
-There are no events emitted by this component
+There are no events emitted by this component.
+
+## Override
+
+`
+codex-template-bookings
+`
+

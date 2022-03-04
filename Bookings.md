@@ -20,7 +20,7 @@ Renders booking-cards for future or past customer bookings.
 | type | Whether to show upcoming bookings or previous bookings | `String` | 'upcoming' | Either 'upcoming' or 'previous' |
 | hideIfNoResults | Hide this component if there are no results to show | `Boolean` | `false` | - |
 
-Also see [common props](./shared/CommonProps.md) for descriptions of other available props.
+> Note: Also see [common props](./shared/CommonProps.md) for descriptions of other available props.
 
 ## Slots
 
@@ -78,6 +78,6 @@ There are no events emitted by this component.
 ## Override
 
 `
-codex-template-event
+codex-template-bookings
 `
 

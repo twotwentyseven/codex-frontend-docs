@@ -21,7 +21,7 @@ Renders a timetable of events.
 | startDate | The first date to check for events | `String` | '' | - |
 | showFromStartOfDay | Show all events in a day, even if they are in the past | `Boolean` | `true` | - |
 | showBookmarksOnly | Only show bookmarked events | `Boolean` | `false` | - |
-| hideFilters | Hide `codex-filters`. Default filters can still be used but not changed. | `Boolean` | `false` | - |
+| hideFilters | Hide `<codex-filters>`. Default filters can still be used but not updated. | `Boolean` | `false` | - |
 | showCalendarNav | Show the quick date selector | `Boolean` | `true` | - |
 | updateNavPositionOnClick | Update the calendar nav to a relevant date when navigating via the main carousel | `Boolean` | `true` | - |
 | showDateHeader | Show the date above events grouped on the same day | `Boolean` | `true` | - |
@@ -34,7 +34,7 @@ Renders a timetable of events.
 | timetableWrapper | The type of carousel to use. Only Swiper.js supported for now | `String` | 'swiper' | - |
 | filters | The filter configuration object. See [Configuring Filters](shared/FilterConfiguration.md) for more documentation | `Object` | - | - |
 
-Also see [common props](./shared/CommonProps.md) for descriptions of other available props.
+> Note: Also see [common props](./shared/CommonProps.md) for descriptions of other available props.
 
 
 
