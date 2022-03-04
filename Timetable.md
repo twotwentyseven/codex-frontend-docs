@@ -34,8 +34,7 @@ Renders a timetable of events.
 | timetableWrapper | The type of carousel to use. Only Swiper.js supported for now | `String` | 'swiper' | - |
 | filters | The filter configuration object. See [Configuring Filters](shared/FilterConfiguration.md) for more documentation | `Object` | - | - |
 
-
-
+Also see [common props](./shared/CommonProps.md) for descriptions of other available props.
 
 
 

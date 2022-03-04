@@ -27,9 +27,7 @@ Renders event details.
 | minSlotSize | A minimum slot size (pixels) to prevent layouts from becoming too small on small devices | `Number` | `50` | - |
 | showWhenLoggoutOut | Whether to show the event to logged out users | `Boolean` | `false` | - |
 
-
-
-
+Also see [common props](./shared/CommonProps.md) for descriptions of other available props.
 
 
 ## Slots

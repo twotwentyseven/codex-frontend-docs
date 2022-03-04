@@ -19,7 +19,7 @@ Renders bundle cards.
 | contentWrapperType | The element / component to wrap bundle cards in. Note: At the moment the only component supported is `swiper` | `String` | `'div'` | - |
 | contentWrapperSettings | Settings to pass through to the content wrapper type. See [contentWrapperSettings](./shared/ContentWrapperSettings) for more information | `Object` | `{}` | - |
 
-
+Also see [common props](./shared/CommonProps.md) for descriptions of other available props.
 
 ## Slots
 
