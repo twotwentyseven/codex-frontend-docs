@@ -1,6 +1,6 @@
 # Instructors
 
-Renders booking-cards for future or past customer bookings.
+Renders instructor cards and filters.
 
 ## Quick usage
 
@@ -26,35 +26,35 @@ Renders booking-cards for future or past customer bookings.
 **error-messages**
 
 ```html
-<codex-bookings>
+<codex-instructors>
 	<template v-slot:error-messages="{ errors }"></template>
-</codex-bookings>
+</codex-instructors>
 ```
 
 **loading-message**
 
 ```html
-<codex-bookings>
+<codex-instructors>
 	<template v-slot:loading-message></template>
-</codex-bookings>
+</codex-instructors>
 ```
 
 **no-results**   
 
 Rendered inside of `cdx_noresults`
 ```html
-<codex-bookings>
+<codex-instructors>
 	<template v-slot:no-results="{ type }"></template>
-</codex-bookings>
+</codex-instructors>
 ```
 
 **instructor-cards**   
 
 Rendered inside of `cdx_list`
 ```html
-<codex-bookings>
+<codex-instructors>
 	<template v-slot:instructor-card="{ filteredResource, showTags, handleInstructorClick }"></template>
-</codex-bookings>
+</codex-instructors>
 ```
 
 ## URL parameters
@@ -68,6 +68,6 @@ There are no events emitted by this component.
 ## Override
 
 `
-codex-template-bookings
+codex-template-instructors
 `
 

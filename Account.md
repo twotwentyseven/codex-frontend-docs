@@ -125,7 +125,9 @@ Each view has the following three slots that can be used to add additional conte
 	<template v-slot:account-overview="{ component, ...slotProps }">
 		<component v-bind="slotProps" :is="component">
 			<template v-slot:header="{ customer }"></template>
-			<template v-slot:content></template>
+			<template v-slot:content>
+				<codex-milestones :circle-data="{ diameter: 160, strokeWidth: 12 }"></codex-milestones>
+			</template>
 			<template v-slot:footer="{ customer }"></template>
 		</component>
 	</template>
