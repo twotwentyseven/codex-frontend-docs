@@ -1,4 +1,4 @@
-# StripeCard
+# StripeConfirmSCA
 
 Renders a card-style form to update a stripe card.
 
@@ -14,18 +14,22 @@ Renders a card-style form to update a stripe card.
 
 | Name | Description | Type | Default | Validation |
 | - | - | - | - | - |
-| combined | Whether to render stripe elements individually or combine them together | `Boolean` | `true` | - |
-| stripeOptions | Stripe Options | `Object` | `{}` | - |
-| stripeNumberOptions | Stripe Number Options | `Object` | `{}` | - |
-| stripeExpiryOptions | Stripe Expiry Options | `Object` | `{}` | - |
-| stripeCvcOptions | Stripe CVC Options | `Object` | `{}` | - |
+| paymentIntentId | Passed to loadStripeIntent | `String` | - | - |
+| nextPageUrl | The link url once payment has been processed | `/account` | - | - |
+| nextPageText | The link text once payment has been processed | `/account` | - | - |
 
 > Note: Also see [common props](./shared/CommonProps.md) for descriptions of other available props.
 
 
 ## Slots
 
-None
+**error-messages**
+
+```html
+<codex-stripe-confirm-sca>
+	<template v-slot:error-messages></template>
+</codex-stripe-confirm-sca>
+```
 
 ## URL parameters
 

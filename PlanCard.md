@@ -10,11 +10,16 @@ Renders an individual plan card, displaying plan information. Intended for use i
 
 ## Props
 
-**Optional**
+**Required**
 
 | Name | Description | Type | Default | Validation |
 | - | - | - | - | - |
 | plan | The plan object | `Object` | - | - |
+
+**Optional**
+
+| Name | Description | Type | Default | Validation |
+| - | - | - | - | - |
 | priceInButton | Show the plan price inside the add to cart button | `Boolean` | `false` | - |
 | hideIfDisabled | Hide plan if it is set as disabled | `Boolean` | `false` | - |
 | variableStartDate | Allow plans to start on an alternative date | `Boolean` | `false` | - |

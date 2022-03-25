@@ -10,11 +10,16 @@ Renders an individual bundle card, displaying bundle information. Intended for u
 
 ## Props
 
-**Optional**
+**Required**
 
 | Name | Description | Type | Default | Validation |
 | - | - | - | - | - |
 | bundle | The bundle object | `Object` | - | - |
+
+**Optional**
+
+| Name | Description | Type | Default | Validation |
+| - | - | - | - | - |
 | purchasedBundles | A customer's purchased bundles | `Array` | - | - |
 | hideIfDisabled | Hide bundle if it is set as disabled | `Boolean` | `false` | - |
 

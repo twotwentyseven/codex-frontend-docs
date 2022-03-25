@@ -1,4 +1,4 @@
-# Plans
+# Profile
 
 Renders a profile update form.
 

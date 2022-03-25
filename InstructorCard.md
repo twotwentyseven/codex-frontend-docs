@@ -10,11 +10,16 @@ Renders an individual instructor card, displaying basic instructor information. 
 
 ## Props
 
-**Optional**
+**Required**
 
 | Name | Description | Type | Default | Validation |
 | - | - | - | - | - |
 | instructor | The Instructor object | `Object` | - | - |
+
+**Optional**
+
+| Name | Description | Type | Default | Validation |
+| - | - | - | - | - |
 | showTags | A list of tags to display within the card, if set on the instructor | `Array` | - | - |
 
 
