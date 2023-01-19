@@ -7,7 +7,7 @@ Renders a container component for the account area. `<router-view>` setup is han
 Codex account must be rendered inside a root element with an ID of 'codex-account'. This is to allow [vue-router](https://router.vuejs.org/) to be used in the account area without interfering with other components / and standard links on the site.
 
 ```vue
-<div id="codex-account">
+<div data-codex id="codex-account">
 	<codex-account>
 		<codex-account-nav-links :routes="window.codex.routerConfig.routes"></codex-account-nav-links>
 	</codex-account>
