@@ -72,7 +72,6 @@ Some components can be added in without additional properties (such as the `<cod
 * [Plans](Plans.md)
 * [PopoutCart](PopoutCart.md)
 * [Profile](Profile.md)
-* [Update README](Update README.md)
 * [Register](Register.md)
 * [Selectric](Selectric.md)
 * [StripeCard](StripeCard.md)
