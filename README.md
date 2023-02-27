@@ -16,7 +16,8 @@ You can also use overrides to tailor your settings to fit your requirements.
 </head>
 ```
 
-**Note:** You will need to replace `yoursite.codexfit.com` with your own installation.
+> **Note**  
+> You will need to replace `yoursite.codexfit.com` with your own installation.
 
 Next, you will need to drop components into your site - in this example we'll use the `<codex-login>` component.
 
@@ -30,7 +31,8 @@ To initialise the component, add a `data-codex` the parent element (ideally a `d
 </body>
 ```
 
-**Note:** Any code inside the `data-codex` will be manipulated by the Codex components, so you should not add `<script>` or `<style>` tags inside, nor should you attach event handlers to elements inside (they may be removed).
+> **Warning**  
+> Any code inside the `data-codex` will be manipulated by the Codex components, so you should not add `<script>` or `<style>` tags inside, nor should you attach event handlers to elements inside (they may be removed).
 
 
 ## Adding components to your site
