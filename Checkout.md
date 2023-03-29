@@ -19,9 +19,9 @@ This is one of 2 components that are necessary to enable customers to purchase t
 **Optional**
 
 | Name | Description | Type | Default | Validation |
-| - | - | - | - | - |
-| announcementBar | Unknown - passed through to cart | `String` | - | - |
-| announcementUrl | Unknown - passed through to cart | `String` | - | - |
+|------|-------------|------|---------|---------|
+| announcementBar | Unknown - passed through to cart | `String` | -       | - |
+| announcementUrl | Unknown - passed through to cart | `String` | -       | - |
 
 Also see [common props](./shared/CommonProps.md) for descriptions of other available props.
 
@@ -62,7 +62,7 @@ A Stripe PaymentIntent ID can be passed as a query parameter as follows:
 
 `/pages/checkout?payment_intent=pi_abcdef123456ghijkl`
 
-This will cause the component to load the order associated with the specified payment intent and display the details including payment status
+This will cause the component to load the order associated with the specified Payment Intent and display the details including payment status
 
 ## Override
 

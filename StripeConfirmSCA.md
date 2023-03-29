@@ -25,14 +25,13 @@ Also see [common props](./shared/CommonProps.md) for descriptions of other avail
 
 ## Slots
 
-**empty-cart**
+**error-messages**
 
 ```html
-<codex-stripe-confirm-sca>
-	<template v-slot:error-messages></template>
-</codex-stripe-confirm-sca>
+<codex-bookings>
+	<template v-slot:error-messages="{ errors }"></template>
+</codex-bookings>
 ```
-
 
 
 ## URL Parameters
