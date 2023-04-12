@@ -18,9 +18,9 @@ The configuration object can be used to set-up how a resource should be filtered
 or
 
 ```js
-[
+
 	['instructor', 'event_type', 'duration_in_minutes']
-]
+
 ```
 
 
