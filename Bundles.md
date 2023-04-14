@@ -18,6 +18,7 @@ Renders bundle cards.
 | hideDisabledBundles | Hide bundles if they are set as disabled | `Boolean` | `false` | - |
 | contentWrapperType | The element / component to wrap bundle cards in. Note: At the moment the only component supported is `swiper` | `String` | `'div'` | - |
 | contentWrapperSettings | Settings to pass through to the content wrapper type. See [contentWrapperSettings](./shared/ContentWrapperSettings) for more information | `Object` | `{}` | - |
+| showPricesInline | Show the price within the button | `Boolean` | `false` | - |
 
 > Note: Also see [common props](./shared/CommonProps.md) for descriptions of other available props.
 

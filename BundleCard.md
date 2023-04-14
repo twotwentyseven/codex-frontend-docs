@@ -22,6 +22,7 @@ Renders an individual bundle card, displaying bundle information. Intended for u
 | - | - | - | - | - |
 | purchasedBundles | A customer's purchased bundles | `Array` | - | - |
 | hideIfDisabled | Hide bundle if it is set as disabled | `Boolean` | `false` | - |
+| showPrice | Show the price within the button | `Boolean` | `false` | - |
 
 
 ## Slots
