@@ -66,7 +66,6 @@ This will cause the component to load the order associated with the specified Pa
 
 ## CSS Variables
 
-`
     --codex-cart-min-width: 32.5rem;
     --codex-cart-max-width: 32.5rem;
 
@@ -119,7 +118,6 @@ This will cause the component to load the order associated with the specified Pa
     --success-inverted: rgb(48 48 48);
 
     --stroke-color: #000;
-`
 
 ## Override
 
