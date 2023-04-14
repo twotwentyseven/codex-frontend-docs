@@ -1,12 +1,14 @@
 # Checkout
 
+Checkout tends to live within a modal component. It is added through the autoconfig within a modal.
+
 Renders a checkout component that contains a child component for either a cart or an order.
 
 The cart component includes cart controls, login/registration, and checkout controls necessary to manage it.
 
 The order component automatically checks and displays payment status and allows selection of payment method in the case of failures.
 
-This is one of 2 components that are necessary to enable customers to purchase through your 
+This is one of 2 components that are necessary to enable customers to purchase through your site
 
 ## Quick usage
 
