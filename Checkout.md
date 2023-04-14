@@ -74,7 +74,6 @@ This will cause the component to load the order associated with the specified Pa
     --codex-cart-body-font: "Montserrat", sans-serif;
     --codex-cart-body-font-family: "Montserrat", sans-serif;
 
-    --cart-bg-color: 255 255 255;
     --codex-cart-background-color: 255 255 255;
     --codex-cart-border-color: 48 48 48;
     --codex-cart-border-width: 1px;
