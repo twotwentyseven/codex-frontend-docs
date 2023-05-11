@@ -19,6 +19,7 @@ Renders a video detail page.
 | playerReportingInterval | How often to log the view | `Number` | 30 | - |
 | purchaseUrl | The URL used to buy credits / plans | `String` | `'/pages/memberships'` | - |
 | showCountdown | Show a countdown timer if the event is in the future | `Boolean` | `true` | - |
+| use-native-controls | Uses teh vanilla Vimeo player instead of the styled up CodexFit video player | `Boolean` | `false` | - |
 | color | The video player accent color | `String` | `'#6AC7F9'` | - |
 
 > Note: Also see [common props](./shared/CommonProps.md) for descriptions of other available props.
