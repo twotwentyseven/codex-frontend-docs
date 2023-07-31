@@ -17,6 +17,7 @@ Renders plan cards.
 | hideIfNoResults | Hide this component if there are no results to show | `Boolean` | `false` | - |
 | hideDisabledBundles | Hide bundles if they are set as disabled | `Boolean` | `false` | - |
 | variableStartDate | Allow plans to start on an alternative date, passed on to codex-plan-card | `Boolean` | `false` | - |
+| daysOfWeekToShow | Allows selective day of week when using variableStartDate, passed on to codex-plan-card.  Supply as an array of days of week (starting Sunday at 0, finishing Saturday at 6) | `Array` | `[0,1,2,3,4,5,6]` | - |
 
 
 > Note: Also see [common props](./shared/CommonProps.md) for descriptions of other available props.
