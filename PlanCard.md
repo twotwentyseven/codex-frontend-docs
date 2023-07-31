@@ -23,6 +23,7 @@ Renders an individual plan card, displaying plan information. Intended for use i
 | priceInButton | Show the plan price inside the add to cart button | `Boolean` | `false` | - |
 | hideIfDisabled | Hide plan if it is set as disabled | `Boolean` | `false` | - |
 | variableStartDate | Allow plans to start on an alternative date | `Boolean` | `false` | - |
+| daysOfWeekToShow | Allows selective day of week when using variableStartDate. Supply as an array of days of week (starting Sunday at 0, finishing Saturday at 6) | `Array` | `[0,1,2,3,4,5,6]` | - |
 
 
 ## Slots
