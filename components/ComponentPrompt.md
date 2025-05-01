@@ -1,3 +1,5 @@
+# Component Documentation Template
+
 Please create detailed documentation for the [COMPONENT_NAME] component following this structure:
 
 1. Start with a brief overview of the component's purpose and main functionality.
@@ -6,12 +8,26 @@ Please create detailed documentation for the [COMPONENT_NAME] component followin
 
 3. List all key features as bullet points.
 
-4. Document all props in tables, grouped by category if applicable (e.g., State Props, Configuration Props, Text Props), including:
+4. Document all props in tables, grouped by category if applicable:
+
+   ### Configuration Props
    - Prop name
    - Type
    - Required status
    - Default value
    - Description
+
+   ### Common Props
+   Document which common props from `@/config/common` are used:
+   | Prop Name | Usage |
+   |-----------|-------|
+   | propName | How the prop is used in this component |
+
+   ### Common Functions
+   Document which utilities from `useCommon` are used:
+   | Function | Usage |
+   |----------|-------|
+   | functionName | How the function is used in this component |
 
 5. Document all events in a table with:
    - Event name
@@ -51,6 +67,8 @@ Please ensure:
 - Props, events, and slots are accurately documented
 - Best practices are specific to the component's use case
 - Documentation includes any relevant notes about browser compatibility, accessibility, or performance considerations
+- Common props and functions are properly documented with real usage examples
+- Loading states and responsive behavior using common utilities are explained
 
 Use the following format for code examples:
 ```vue
