@@ -26,7 +26,7 @@ The Field components are a collection of form input elements that share a common
 <codex-select-field
   name="country"
   label="Country"
-  :settings="countries"
+  :options="countries"
   option-value="code"
   option-name="name"
 />
@@ -134,7 +134,7 @@ The Field components are a collection of form input elements that share a common
 <codex-select-field
   name="category"
   label="Select Category"
-  :settings="[
+  :options="[
     { value: 'electronics', displayValue: 'Electronics' },
     { value: 'clothing', displayValue: 'Clothing' }
   ]"
@@ -148,7 +148,7 @@ The Field components are a collection of form input elements that share a common
 <codex-checkbox-group-field
   name="preferences"
   label="Preferences"
-  :settings="[
+  :options="[
     { value: 'email', displayValue: 'Email Updates' },
     { value: 'sms', displayValue: 'SMS Notifications' }
   ]"
@@ -202,4 +202,4 @@ The Field components are a collection of form input elements that share a common
 - Handle async validation appropriately
 
 ## Component Registration
-All field components are registered with the `codex-` prefix followed by the field type (e.g., `codex-text-field`, `codex-select-field`). 
+All field components are registered with the `codex-` prefix followed by the field type (e.g., `codex-text-field`, `codex-select-field`).

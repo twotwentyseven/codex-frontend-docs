@@ -121,22 +121,143 @@ The component uses the following utilities from `useCommon`:
 11. Start Date Required
 
 ## Internationalization
+
 The component uses the following translation keys:
-- `plan.already_active`: Already subscribed message
-- `plan.starting_date`: Scheduled start date message
-- `plan.choose_start_date`: Start date selector label
-- `plan.joining_fee`: Joining fee label
-- `product.whats_included`: What's included section title
-- `plan.per_separator`: Price per booking separator
-- `plan.credit`: Booking text
-- `product.adding`: Adding to cart text
-- `product.add_to_cart`: Add to cart button text
-- `product.unavailable`: Unavailable state text
-- `product.error`: Error state text
-- `product.starting`: Starting subscription text
-- `plan.unavailable`: Plan unavailable text
-- `cart.added_to_cart`: Success toast message
-- `plan.start_immediately`: Immediate start text
+
+### Core Plan Information
+| Key | Usage |
+|-----|-------|
+| `plan.title` | Default plan title when title prop is not provided |
+| `product.whats_included` | What's included section title |
+| `plan.description` | Plan description fallback |
+
+### Plan Status and Availability
+| Key | Usage |
+|-----|-------|
+| `plan.already_active` | Already subscribed message |
+| `plan.unavailable` | Plan unavailable text |
+| `plan.coming_soon` | Coming soon status |
+| `plan.suspended` | Suspended plan status |
+| `plan.archived` | Archived plan status |
+
+### Start Date and Scheduling
+| Key | Usage |
+|-----|-------|
+| `plan.starting_date` | Scheduled start date message |
+| `plan.choose_start_date` | Start date selector label |
+| `plan.start_immediately` | Immediate start text |
+| `plan.starts_on` | Starts on date prefix |
+| `plan.next_available_start` | Next available start date |
+| `plan.custom_start_date` | Custom start date option |
+
+### Pricing and Billing
+| Key | Usage |
+|-----|-------|
+| `plan.joining_fee` | Joining fee label |
+| `plan.per_separator` | Price per booking separator ("per") |
+| `plan.credit` | Single booking/credit text |
+| `plan.credits` | Multiple bookings/credits text |
+| `plan.unlimited` | Unlimited access text |
+| `plan.price_per_credit` | Price per credit calculation |
+| `plan.billing_interval` | Billing interval display |
+
+### Billing Intervals
+| Key | Usage |
+|-----|-------|
+| `plan.monthly` | Monthly billing interval |
+| `plan.weekly` | Weekly billing interval |
+| `plan.yearly` | Yearly billing interval |
+| `plan.daily` | Daily billing interval |
+| `plan.every_3_months` | Quarterly billing interval |
+| `plan.every_6_months` | Semi-annual billing interval |
+
+### Plan Features and Limits
+| Key | Usage |
+|-----|-------|
+| `plan.max_bookings_per_period` | Booking limit per billing period |
+| `plan.rollover_credits` | Rollover credits feature |
+| `plan.pause_subscription` | Pause subscription feature |
+| `plan.cancel_anytime` | Cancel anytime feature |
+| `plan.no_commitment` | No commitment feature |
+
+### Cart and Purchase Actions
+| Key | Usage |
+|-----|-------|
+| `product.add_to_cart` | Add to cart button text |
+| `product.adding` | Adding to cart loading state |
+| `product.starting` | Starting subscription text |
+| `cart.added_to_cart` | Success toast message |
+| `cart.in_cart` | Already in cart indicator |
+| `plan.subscribe_now` | Subscribe now button |
+
+### Plan States and Messages
+| Key | Usage |
+|-----|-------|
+| `product.unavailable` | Unavailable state text |
+| `product.error` | Generic error state text |
+| `plan.enrollment_closed` | Enrollment closed message |
+| `plan.waitlist_available` | Waitlist available message |
+| `plan.limited_spots` | Limited spots available |
+
+### Trial and Promotional
+| Key | Usage |
+|-----|-------|
+| `plan.free_trial` | Free trial indicator |
+| `plan.trial_period` | Trial period length |
+| `plan.promotional_price` | Promotional pricing indicator |
+| `plan.limited_time_offer` | Limited time offer notice |
+| `plan.discount_applied` | Discount applied message |
+
+### Translation Usage Examples
+```vue
+<!-- Plan credits display -->
+<div class="plan-credits">
+  {{ plan.max_bookings_per_period }} 
+  {{ $t("plans.per_separator") }} 
+  {{ translatedBillingInterval(plan.billing_interval) }}
+</div>
+
+<!-- Price per credit calculation -->
+<div v-if="showPricePerCredit" class="price-per-credit">
+  {{ formatCurrency(plan.price / plan.max_bookings_per_period) }} 
+  {{ $t("plans.per_separator") }} 
+  {{ $t("plans.credit") }}
+</div>
+
+<!-- Plan status badges -->
+<div class="plan-badge">
+  <template v-if="scheduledSubscriptionStartAt">
+    {{ scheduledSubscriptionStartAt }}
+  </template>
+  <template v-else-if="customerHasSubscription">
+    {{ $t('plans.already_active') }}
+  </template>
+</div>
+
+<!-- Start date selection -->
+<codex-select-field 
+  v-if="variableStartDate"
+  :name="'plan-start-date-'+plan.id"
+  :label="$t('plans.choose_start_date')"
+  :options="startDates"
+  v-model="start"
+  :placeholder="$t('plans.choose_start_date')"
+/>
+
+<!-- Add to cart button with dynamic text -->
+<codex-button
+  :processingText="$t('product.adding')"
+  :defaultText="defaultText"
+  :disabledText="$t('product.unavailable')"
+  :errorText="$t('product.error')"
+  @click="add"
+/>
+
+<!-- Joining fee display -->
+<div v-if="plan.joining_fee > 0" class="joining-fee">
+  ({{ $t('plans.joining_fee') }} {{ formatCurrency(plan.joining_fee) }})
+</div>
+```
 
 ## Examples
 
@@ -174,7 +295,7 @@ The component uses the following translation keys:
   <template #footer="{ startDates, updateStart, start }">
     <div class="date-selector">
       <codex-select-field
-        :settings="startDates"
+        :options="startDates"
         v-model="start"
         @update:model-value="updateStart"
       />

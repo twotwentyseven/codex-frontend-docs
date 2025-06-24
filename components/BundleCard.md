@@ -110,18 +110,69 @@ The component uses the following utilities from `useCommon`:
 8. Added Success
 
 ## Internationalization
+
 The component uses the following translation keys:
-- `product.whats_included`: What's included section title
-- `bundle.credits`: Credits text
-- `bundle.per_separator`: Price per credit separator
-- `bundle.credit`: Credit text
-- `product.adding`: Adding to cart text
-- `product.add_to_cart`: Add to cart button text
-- `product.unavailable`: Unavailable state text
-- `product.error`: Error state text
-- `bundle.expiry_prefix`: Expiry text prefix
-- `bundle.days/weeks/months/years`: Time unit translations
-- `cart.added_to_cart`: Success toast message
+
+### Core Product Information
+| Key | Usage |
+|-----|-------|
+| `product.title` | Default product title when title prop is not provided |
+| `product.whats_included` | What's included section title |
+| `product.description` | Product description fallback |
+
+### Bundle-Specific Information
+| Key | Usage |
+|-----|-------|
+| `bundles.credits` | Credits text with pluralization (e.g., "10 credits") |
+| `bundles.credit` | Single credit text for price per credit display |
+| `bundles.per_separator` | Price per credit separator ("per") |
+| `bundles.expiry_prefix` | Expiry text prefix ("Expires in") |
+
+### Bundle Expiry and Time Translation
+| Key | Usage |
+|-----|-------|
+| `bundles.days` | Days time unit for expiry display |
+| `bundles.weeks` | Weeks time unit for expiry display |
+| `bundles.months` | Months time unit for expiry display |
+| `bundles.years` | Years time unit for expiry display |
+
+### Cart and Purchase Actions
+| Key | Usage |
+|-----|-------|
+| `product.add_to_cart` | Add to cart button text |
+| `product.adding` | Adding to cart loading state |
+| `product.unavailable` | Unavailable state text |
+| `product.error` | Generic error state text |
+| `cart.added_to_cart` | Success toast message |
+
+### Translation Usage Examples
+```vue
+<!-- Bundle credits display with pluralization -->
+<div class="bundle-credits">
+  {{ bundle.total_credits }} {{ $t('bundles.credits', bundle.total_credits) }}
+</div>
+
+<!-- Price per credit calculation -->
+<div v-if="showPricePerCredit" class="price-per-credit">
+  {{ formatCurrency(bundle.price / bundle.total_credits) }} 
+  {{ $t('bundles.per_separator') }} 
+  {{ $t('bundles.credit') }}
+</div>
+
+<!-- Bundle expiry information -->
+<div v-if="bundle.expires_offset" class="bundle-expiry">
+  {{ $t('bundles.expiry_prefix') }} {{ translatedExpiry(bundle.expires_offset) }}
+</div>
+
+<!-- Add to cart button with multiple states -->
+<codex-button
+  :processingText="$t('product.adding')"
+  :defaultText="$t('product.add_to_cart')"
+  :disabledText="$t('product.unavailable')"
+  :errorText="$t('product.error')"
+  @click="add"
+/>
+```
 
 ## Examples
 
@@ -257,7 +308,7 @@ const { formatCurrency } = useCommon(props);
 </div>
 
 <div class="_c-price-per-credit">
-  {{ formatCurrency(bundle.price / bundle.total_credits) }} {{ $t("bundle.per_separator") }}
+  {{ formatCurrency(bundle.price / bundle.total_credits) }} {{ $t("bundles.per_separator") }}
 </div>
 ```
 
