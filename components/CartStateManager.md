@@ -110,7 +110,7 @@ The `CartStateManager` component uses translation keys for various payment and o
 
 | Translation Key | Usage | Example Context |
 |----------------|-------|-----------------|
-| `cart.checkout` | Checkout page header | Main checkout title |
+| `cart.checkout_title` | Checkout page header | Main checkout title |
 | `cart.order_cancelled_title` | Cancelled order error title | When order is cancelled |
 | `cart.order_cancelled_description` | Cancelled order error description | Explanation of cancellation |
 | `cart.fail_close_order` | Close cancelled order button | Action to clear failed order |

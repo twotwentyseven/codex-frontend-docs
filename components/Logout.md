@@ -57,8 +57,8 @@ The Logout component is a flexible button component that handles user logout fun
 
 ## Internationalization
 The component uses the following translation keys:
-- `cart.logging_you_out`: Text shown during logout process
-- `cart.logout`: Default logout button text
+- `logout.logging_you_out`: Text shown during logout process
+- `logout.logout`: Default logout button text
 
 ## Examples
 

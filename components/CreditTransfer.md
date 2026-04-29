@@ -163,9 +163,9 @@ The component uses the following translation keys:
 ### Transfer Success Interface
 | Key | Usage |
 |-----|-------|
-| `credits.success_title` | Success state title |
-| `credits.success_msg` | Success state message |
-| `credits.close_transfer_modal` | Close modal button text |
+| `credit.success_title` | Success state title |
+| `credit.success_msg` | Success state message |
+| `credit.close_transfer_modal` | Close modal button text |
 
 ### Translation Usage Examples
 ```vue

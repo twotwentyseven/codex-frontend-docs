@@ -167,7 +167,7 @@ The component uses the following translation keys:
 ### Core Cart Interface
 | Key | Usage |
 |-----|-------|
-| `cart.cart` | Main cart header title |
+| `cart.title` | Main cart header title |
 | `cart.shopping_cart` | Alternative cart title |
 | `cart.empty_basket` | Empty cart message |
 

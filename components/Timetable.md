@@ -603,9 +603,6 @@ The component uses the following translation keys:
 | Key | Usage |
 |-----|-------|
 | `timetable.title` | Default page title when title prop is not provided |
-| `timetable.introduction` | Header description text |
-| `timetable.timetable` | Default timetable heading |
-| `timetable.loading_timetable` | Loading state message |
 
 ### Date and Time Display
 | Key | Usage |

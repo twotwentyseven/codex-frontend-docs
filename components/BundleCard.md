@@ -131,10 +131,10 @@ The component uses the following translation keys:
 ### Bundle Expiry and Time Translation
 | Key | Usage |
 |-----|-------|
-| `bundles.days` | Days time unit for expiry display |
-| `bundles.weeks` | Weeks time unit for expiry display |
-| `bundles.months` | Months time unit for expiry display |
-| `bundles.years` | Years time unit for expiry display |
+| `time.days` | Days time unit for expiry display |
+| `time.weeks` | Weeks time unit for expiry display |
+| `time.months` | Months time unit for expiry display |
+| `time.years` | Years time unit for expiry display |
 
 ### Cart and Purchase Actions
 | Key | Usage |

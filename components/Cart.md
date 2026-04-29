@@ -444,7 +444,7 @@ The Cart component supports comprehensive internationalization through Vue i18n 
 ### Translation Keys
 
 #### Cart Interface
-- `cart.cart` - Cart title/header
+- `cart.title` - Cart title/header
 - `cart.empty_basket` - Empty cart message
 - `cart.subtotal` - Subtotal label
 - `cart.discount` - Discount label  

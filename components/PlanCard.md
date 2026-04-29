@@ -136,9 +136,6 @@ The component uses the following translation keys:
 |-----|-------|
 | `plan.already_active` | Already subscribed message |
 | `plan.unavailable` | Plan unavailable text |
-| `plan.coming_soon` | Coming soon status |
-| `plan.suspended` | Suspended plan status |
-| `plan.archived` | Archived plan status |
 
 ### Start Date and Scheduling
 | Key | Usage |
@@ -157,19 +154,6 @@ The component uses the following translation keys:
 | `plan.per_separator` | Price per booking separator ("per") |
 | `plan.credit` | Single booking/credit text |
 | `plan.credits` | Multiple bookings/credits text |
-| `plan.unlimited` | Unlimited access text |
-| `plan.price_per_credit` | Price per credit calculation |
-| `plan.billing_interval` | Billing interval display |
-
-### Billing Intervals
-| Key | Usage |
-|-----|-------|
-| `plan.monthly` | Monthly billing interval |
-| `plan.weekly` | Weekly billing interval |
-| `plan.yearly` | Yearly billing interval |
-| `plan.daily` | Daily billing interval |
-| `plan.every_3_months` | Quarterly billing interval |
-| `plan.every_6_months` | Semi-annual billing interval |
 
 ### Plan Features and Limits
 | Key | Usage |

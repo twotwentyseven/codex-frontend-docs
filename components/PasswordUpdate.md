@@ -107,15 +107,15 @@ The `PasswordUpdate` component uses translation keys for password change interfa
 
 | Translation Key | Usage | Example Context |
 |----------------|-------|-----------------|
-| `account.update_password_title` | Default title for password update section | Form header |
+| `password.update_password_title` | Default title for password update section | Form header |
 | `password.password` | Password field label | New password input |
-| `account.new_password` | New password placeholder text | Input placeholder |
+| `password.new_password` | New password placeholder text | Input placeholder |
 | `password.confirm_password` | Confirm password field label | Password confirmation input |
-| `account.confirm_new_password` | Confirm password placeholder text | Input placeholder |
+| `password.confirm_new_password` | Confirm password placeholder text | Input placeholder |
 | `button.update_password` | Submit button text | Password update action |
 | `button.updating` | Processing state button text | During password update |
-| `account.password_updated_successfully` | Success message after password update | Confirmation message |
-| `account.must_be_logged_in_to_update_password` | Authentication required message | Login requirement |
+| `password.password_updated_successfully` | Success message after password update | Confirmation message |
+| `password.must_be_logged_in_to_update_password` | Authentication required message | Login requirement |
 
 ### Implementation Examples
 
